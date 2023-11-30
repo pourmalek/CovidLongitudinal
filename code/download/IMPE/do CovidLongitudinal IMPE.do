@@ -21,14 +21,14 @@ cd "$pathCovidLongitudinal/download/IMPE"
 
 
 
-* Download estimates files for IMPE model, part 1 of 3, for 2000
+* Download estimates files for IMPE model, part 1 of 3, for 2020
 do "do CovidLongitudinal IMPE 1.do"
 
 
-* Download estimates files for IMPE model, part 2 of 3, for 2001
+* Download estimates files for IMPE model, part 2 of 3, for 2021
 do "do CovidLongitudinal IMPE 2.do"
 
 
-* Download estimates files for IMPE model, part 3 of 3, for 2002
+* Download estimates files for IMPE model, part 3 of 3, for 2022
 do "do CovidLongitudinal IMPE 3.do"
 
