@@ -1,2 +1,1 @@
-
-# Predictive performance of international periodically updated COVID-19 epidemic models
+Predictive performance of international periodically updated COVID-19 epidemic models
