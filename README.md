@@ -1,2 +1,2 @@
-# CovidLongitudinal-main
-Longitudinal assessment of international periodically updating COVID-19 pandemic studies
+
+# Predictive performance of international periodically updated COVID-19 epidemic models
