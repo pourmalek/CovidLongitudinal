@@ -279,9 +279,40 @@ restore
 
 sort loc_grand_name model
 
+reshape wide update, i(loc_grand_name) j(model) string
+
+rename (updateDELP updateIHME updateIMPE updateLANL updateUCLA updateYYGU) ///
+       (DELP_update_num IHME_update_num IMPE_update_num LANL_update_num UCLA_update_num YYGU_update_num)
+	   
+label var DELP_update_num "DELP update numbers for this country"
+label var IHME_update_num "IHME update numbers for this country"
+label var IMPE_update_num "IMPE update numbers for this country"
+label var LANL_update_num "LANL update numbers for this country"
+label var UCLA_update_num "UCLA update numbers for this country"
+label var YYGU_update_num "YYGU update numbers for this country"
+
+egen MEANS_update_num = rowtotal(DELP_update_num IHME_update_num IMPE_update_num LANL_update_num UCLA_update_num YYGU_update_num)
+label var MEANS_update_num "Mean of models' update numbers for this country"
+
+preserve
+
+collapse (sum) DELP_update_num IHME_update_num IMPE_update_num LANL_update_num UCLA_update_num YYGU_update_num ///
+MEANS_update_num
+
+gen loc_grand_name = "SUM"
+
+order loc_grand_name 
+
+save "model-country-update sum.dta", replace
+
+restore
+
+append using "model-country-update sum.dta"
+
 save "model-country-update.dta", replace
 
 export excel using "model-country-update.xlsx", firstrow(variables) replace
+
 
 
 
