@@ -9,10 +9,10 @@
 
 
 *** input data files: "$pathCovidLongitudinal/countries/`country'/ALL MODELS `country' error - only error measures across models.dta", clear
-**                   /// gets for each country, error measures across models data
+**                   /// get for each country, error measures across models data
 
 **                   "$pathCovidLongitudinal/master/loc_grand_name.dta"
-**                   /// gets master location grand name (loc_grand_name) data
+**                   /// get master location grand name (loc_grand_name) data
 
 **                   "$pathCovidLongitudinal/merge/WB_countries_Admin0_10mWB_countries_Admin0_10m.shp"
 **                   "$pathCovidLongitudinal/merge/WB_countries_Admin0_10mWB_countries_Admin0_10m.dbf"
@@ -26,15 +26,26 @@
 **                   /// saves data for error measures across models for all countries merged with 
 **                   /// World Bank shape and dbf data for mapping countries, variable _ID
 
-**                   "CovidLongitudinal_Final_Data_Dictionary.csv" 
-
 **                   "world with country.dta"
 **                   "world_shp.dta"
 **                   /// saves World Bank shape and dbf data for mapping countries
 
+**                   "CovidLongitudinal_Final_Data.dta" <<<<<<<-----------------
+**                   "CovidLongitudinal_Final_Data.xlsx" <<<<<<<-----------------
+
+**                   "model-country-update.dta"  // accounting model-country-update unit numbers
+**                   "model-country-update.xlsx"  
+
 
 *** output data dictionary files: "ALL MODELS all countries error - only error measures across models Data Dictionary.csv"
 **                               "ALL MODELS all countries error - only error measures across models - with WB Data Dictionary.csv"
+
+**                   "CovidLongitudinal_Final_Data_Dictionary.csv" 
+
+
+*** Results spreadsheets:
+**                   "Results Countries.xlsx" // country level <<<<<<<-----------------
+**                   "Results Summary Statistics.xlsx" // WHO region level and global <<<<<<<-----------------
 
 
 *** graphs:
@@ -116,7 +127,6 @@ restore
 
 
 
-
 *****************************************************
 
 * add vars (region) form "loc_grand_name.dta"
@@ -147,8 +157,131 @@ save "ALL MODELS all countries error - only error measures across models.dta", r
 
 
 
+*****************************************************
+
+* model-country-update
 
 
+local list `" "Afghanistan" "Albania" "Algeria" "Andorra" "Angola" "Antigua and Barbuda" "Argentina" "Armenia" "Australia" "Austria" "Azerbaijan" "Bahamas" "Bahrain" "Bangladesh" "Barbados" "Belarus" "Belgium" "Belize" "Benin" "Bhutan" "Bolivia" "Bosnia and Herzegovina" "Botswana" "Brazil" "Brunei" "Bulgaria" "Burkina Faso" "Burundi" "Cambodia" "Cameroon" "Canada" "Cape Verde" "Central African Republic" "Chad" "Chile" "China" "Colombia" "Comoros" "Congo" "Congo DR" "Costa Rica" "Cote d'Ivoire" "Croatia" "Cuba" "Cyprus" "Czechia" "Denmark" "Djibouti" "Dominican Republic" "Ecuador" "Egypt" "El Salvador" "Equatorial Guinea" "Eritrea" "Estonia" "Eswatini" "Ethiopia" "Fiji" "Finland" "France" "Gabon" "Gambia" "Georgia" "Germany" "Ghana" "Greece" "Grenada" "Guatemala" "Guinea" "Guinea Bissau" "Guyana" "Haiti" "Honduras" "Hungary" "Iceland" "India" "Indonesia" "Iran" "Iraq" "Ireland" "Israel" "Italy" "Jamaica" "Japan" "Jordan" "Kazakhstan" "Kenya" "Kiribati" "Korea North" "Korea South" "Kosovo" "Kuwait" "Kyrgyzstan" "Laos" "Latvia" "Lebanon" "Lesotho" "Liberia" "Libya" "Liechtenstein" "Lithuania" "Luxembourg" "Madagascar" "Malawi" "Malaysia" "Maldives" "Mali" "Malta" "Mauritania" "Mauritius" "Mexico" "Micronesia" "Moldova" "Monaco" "Mongolia" "Montenegro" "Morocco" "Mozambique" "Myanmar" "Namibia" "Nepal" "Netherlands" "New Zealand" "Nicaragua" "Niger" "Nigeria" "North Macedonia" "Norway" "Oman" "Pakistan" "Palestine" "Panama" "Papua New Guinea" "Paraguay" "Peru" "Philippines" "Poland" "Portugal" "Qatar" "Romania" "Russia" "Rwanda" "Saint Lucia" "Saint Vincent and the Grenadines" "Samoa" "San Marino" "Sao Tome and Principe" "Saudi Arabia" "Senegal" "Serbia" "Seychelles" "Sierra Leone" "Singapore" "Slovakia" "Slovenia" "Solomon Islands" "Somalia" "South Africa" "South Sudan" "Spain" "Sri Lanka" "Sudan" "Suriname" "Sweden" "Switzerland" "Syria" "Taiwan" "Tajikistan" "Tanzania" "Thailand" "Timor Leste" "Togo" "Tonga" "Trinidad and Tobago" "Tunisia" "Turkey" "Uganda" "Ukraine" "United Arab Emirates" "United Kingdom" "United States of America" "Uruguay" "Uzbekistan" "Vanuatu" "Venezuela" "Viet Nam" "Yemen" "Zambia" "Zimbabwe" "'
+
+foreach country of local list {
+	
+	qui {
+	
+	cd ..
+	
+	cd countries
+	
+	cd "`country'"
+	
+	use "`country' ALL MODELS update dates.dta", clear
+	
+	contract model loc_grand_name
+
+	rename _freq update
+	
+	cd ..
+	
+	cd ..
+	
+	cd merge
+
+	save "`country' model-country-update.dta", replace
+	
+	}
+}
+*
+
+
+* use the file for Afghanistan as frame and add each country
+
+use "/Users/farshadpourmalek/Downloads/CovidLongitudinal-main/code/merge/Afghanistan model-country-update.dta", clear 
+
+foreach country of local list {
+	
+	qui append using "`country' model-country-update.dta"
+
+}
+*
+
+duplicates drop // in terms of all variables, that is the first country, Afghanistan, added as frame 
+
+save "model-country-update.dta", replace
+
+
+* value of the variable update shows the number of updates for each model-country
+* e.g. DELP-Afghanistan	has 314 updates
+
+
+* get model_country_update sum, min, max
+
+summ update
+
+di r(sum) // sum or total model_country_update s
+
+sort update
+
+list in 1 // min model_country_update
+
+gsort - update
+
+list in 1 // max model_country_update
+
+
+
+* get model-countries sum, min, max
+
+preserve 
+
+drop update
+
+contract model
+
+rename _freq country
+
+summ country
+
+display r(sum) // sum or total model-countries or total number of country in all models
+
+sort country
+
+list in 1 // min number of country in all models
+
+gsort - country
+
+list in 1 // max number of country in all models
+
+restore
+
+* get model per country sum, min, max
+
+preserve
+
+drop model
+
+contract loc_grand_name
+
+rename _freq model
+
+summ model
+
+display r(sum) // sum or total model per country
+
+sort model
+
+list in 1 // min number of model per country, already knew it is one
+
+gsort - model
+
+list in 1 // max number of model per country, already knew it is six
+
+restore
+
+sort loc_grand_name model
+
+save "model-country-update.dta", replace
+
+export excel using "model-country-update.xlsx", firstrow(variables) replace
 
 
 
@@ -158,6 +291,8 @@ save "ALL MODELS all countries error - only error measures across models.dta", r
 *****************************************************
 
 * Descriptives across 189 countries, by 4 error types and 6 models
+
+use "ALL MODELS all countries error - only error measures across models.dta", clear
 
 * gen Average of Models for Daily Deaths Error, Global and regional
 egen DD_MODELS_Errorr = rowmean(DD_DELP_Errorr DD_IHME_Errorr DD_IMPE_Errorr DD_LANL_Errorr DD_UCLA_Errorr DD_YYGU_Errorr)
