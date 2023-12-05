@@ -779,6 +779,11 @@ restore
 set scheme white_tableau
 
 
+pctile DD_MODELS_AbPeEr_pct = DD_MODELS_AbPeEr, nq(10)
+list DD_MODELS_AbPeEr_pct in 1/10
+
+drop DD_MODELS_AbPeEr_pct
+
 
 
 * Graph Map C19 daily deaths, DELP model, Absolute Percent Error
@@ -792,7 +797,7 @@ format DD_DELP_AbPeEr %5.1fc
 * use Deciles of MEANS model
 
 grmap DD_DELP_AbPeEr using world_shp, id(_ID) ///
-clmethod(custom) clbreaks(0 96.3 149.0 195.7 296.6 449.6 779.5 1367.1 2695.7 5262.6 85149.2) ///
+clmethod(custom) clbreaks(3.5 96.3 149.0 195.7 296.6 458.4 809.1 1394.1 2695.7 5262.6 23691.6) ///
 fcolor("`colors'") ocolor(white ..) osize(0.05 ..) ///
 legstyle(2) legend(pos(7) size(2.8) region(fcolor(gs15))) ///
 title("C19 daily deaths, DELP model, Absolute Percent Error, 2020-2022", size(4)) 
@@ -826,7 +831,7 @@ format DD_IHME_AbPeEr %5.1fc
 * use Deciles of MEANS model
 
 grmap DD_IHME_AbPeEr using world_shp, id(_ID) ///
-clmethod(custom) clbreaks(0 96.3 149.0 195.7 296.6 449.6 779.5 1367.1 2695.7 5262.6 85149.2) ///
+clmethod(custom) clbreaks(3.5 96.3 149.0 195.7 296.6 458.4 809.1 1394.1 2695.7 5262.6 23691.6) ///
 fcolor("`colors'") ocolor(white ..) osize(0.05 ..) ///
 legstyle(2) legend(pos(7) size(2.8) region(fcolor(gs15))) ///
 title("C19 daily deaths, IHME model, Absolute Percent Error, 2020-2022", size(4)) 
@@ -859,7 +864,7 @@ format DD_IMPE_AbPeEr %5.1fc
 * use Deciles of MEANS model
 
 grmap DD_IMPE_AbPeEr using world_shp, id(_ID) ///
-clmethod(custom) clbreaks(0 96.3 149.0 195.7 296.6 449.6 779.5 1367.1 2695.7 5262.6 85149.2) ///
+clmethod(custom) clbreaks(3.5 96.3 149.0 195.7 296.6 458.4 809.1 1394.1 2695.7 5262.6 23691.6) ///
 fcolor("`colors'") ocolor(white ..) osize(0.05 ..) ///
 legstyle(2) legend(pos(7) size(2.8) region(fcolor(gs15))) ///
 title("C19 daily deaths, IMPE model, Absolute Percent Error, 2020-2022", size(4)) 
@@ -892,7 +897,7 @@ format DD_LANL_AbPeEr %5.1fc
 * use Deciles of MEANS model
 
 grmap DD_LANL_AbPeEr using world_shp, id(_ID) ///
-clmethod(custom) clbreaks(0 96.3 149.0 195.7 296.6 449.6 779.5 1367.1 2695.7 5262.6 85149.2) ///
+clmethod(custom) clbreaks(3.5 96.3 149.0 195.7 296.6 458.4 809.1 1394.1 2695.7 5262.6 23691.6) ///
 fcolor("`colors'") ocolor(white ..) osize(0.05 ..) ///
 legstyle(2) legend(pos(7) size(2.8) region(fcolor(gs15))) ///
 title("C19 daily deaths, LANL model, Absolute Percent Error, 2020-2022", size(4)) 
@@ -924,7 +929,7 @@ format DD_UCLA_AbPeEr %5.1fc
 * use Deciles of MEANS model
 
 grmap DD_UCLA_AbPeEr using world_shp, id(_ID) ///
-clmethod(custom) clbreaks(0 96.3 149.0 195.7 296.6 449.6 779.5 1367.1 2695.7 5262.6 85149.2) ///
+clmethod(custom) clbreaks(3.5 96.3 149.0 195.7 296.6 458.4 809.1 1394.1 2695.7 5262.6 23691.6) ///
 fcolor("`colors'") ocolor(white ..) osize(0.05 ..) ///
 legstyle(2) legend(pos(7) size(2.8) region(fcolor(gs15))) ///
 title("C19 daily deaths, UCLA model, Absolute Percent Error, 2020-2022", size(4)) 
@@ -956,7 +961,7 @@ format DD_YYGU_AbPeEr %5.1fc
 * use Deciles of MEANS model
 
 grmap DD_YYGU_AbPeEr using world_shp, id(_ID) ///
-clmethod(custom) clbreaks(0 96.3 149.0 195.7 296.6 449.6 779.5 1367.1 2695.7 5262.6 85149.2) ///
+clmethod(custom) clbreaks(3.5 96.3 149.0 195.7 296.6 458.4 809.1 1394.1 2695.7 5262.6 23691.6) ///
 fcolor("`colors'") ocolor(white ..) osize(0.05 ..) ///
 legstyle(2) legend(pos(7) size(2.8) region(fcolor(gs15))) ///
 title("C19 daily deaths, YYGU model, Absolute Percent Error, 2020-2022", size(4)) 
@@ -988,7 +993,7 @@ format DD_MODELS_AbPeEr %5.1fc
 * use Deciles of MEANS model
 
 grmap DD_MODELS_AbPeEr using world_shp, id(_ID) ///
-clmethod(custom) clbreaks(0 96.3 149.0 195.7 296.6 449.6 779.5 1367.1 2695.7 5262.6 85149.2) ///
+clmethod(custom) clbreaks(3.5 96.3 149.0 195.7 296.6 458.4 809.1 1394.1 2695.7 5262.6 23691.6) ///
 fcolor("`colors'") ocolor(white ..) osize(0.05 ..) ///
 legstyle(2) legend(pos(7) size(2.8) region(fcolor(gs15))) ///
 title("C19 daily deaths, Mean of models, Absolute Percent Error, 2020-2022", size(4)) 
