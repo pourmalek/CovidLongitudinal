@@ -4,5 +4,5 @@ Predictive performance of international periodically updated COVID-19 epidemic m
 
 
 
-Results are stored in [CovidLongitudinalResults](https://github.com/pourmalek/CovidLongitudinalResults)
+Results are stored in [`CovidLongitudinalResults`](https://github.com/pourmalek/CovidLongitudinalResults)
 
