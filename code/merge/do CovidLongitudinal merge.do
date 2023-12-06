@@ -284,15 +284,15 @@ reshape wide update, i(loc_grand_name) j(model) string
 rename (updateDELP updateIHME updateIMPE updateLANL updateUCLA updateYYGU) ///
        (DELP_update_num IHME_update_num IMPE_update_num LANL_update_num UCLA_update_num YYGU_update_num)
 	   
-label var DELP_update_num "DELP update numbers for this country"
-label var IHME_update_num "IHME update numbers for this country"
-label var IMPE_update_num "IMPE update numbers for this country"
-label var LANL_update_num "LANL update numbers for this country"
-label var UCLA_update_num "UCLA update numbers for this country"
-label var YYGU_update_num "YYGU update numbers for this country"
+label var DELP_update_num "DELP number of updates for this country"
+label var IHME_update_num "IHME number of updates for this country"
+label var IMPE_update_num "IMPE number of updates for this country"
+label var LANL_update_num "LANL number of updates for this country"
+label var UCLA_update_num "UCLA number of updates for this country"
+label var YYGU_update_num "YYGU number of updates for this country"
 
 egen MEANS_update_num = rowtotal(DELP_update_num IHME_update_num IMPE_update_num LANL_update_num UCLA_update_num YYGU_update_num)
-label var MEANS_update_num "Mean of models' update numbers for this country"
+label var MEANS_update_num "Mean of models' number of updates for this country"
 
 preserve
 
