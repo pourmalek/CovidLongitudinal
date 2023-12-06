@@ -663,7 +663,7 @@ restore
 
 
 
-/* foreach update of local list {
+foreach update of local list {
 	
 	* graph Senegal DELP daily deaths each update 
 	
@@ -681,7 +681,7 @@ restore
 	qui graph export "graph 01 Senegal DELP daily deaths update `update'.pdf", replace	
 
 }
-*/
+
 
 
 
@@ -1269,7 +1269,7 @@ restore
 
 
 
-/* foreach update of local list {
+foreach update of local list {
 	
 	* graph Senegal IHME daily deaths each update 
 	
@@ -1287,7 +1287,7 @@ restore
 	qui graph export "graph 01 Senegal IHME daily deaths update `update'.pdf", replace	
 
 }
-*/
+
 
 
 
@@ -1686,7 +1686,7 @@ restore
 
 
 
-/* foreach update of local list {
+foreach update of local list {
 	
 	* graph Senegal IMPE daily deaths each update 
 	
@@ -1704,7 +1704,7 @@ restore
 	qui graph export "graph 01 Senegal IMPE daily deaths update `update'.pdf", replace	
 
 }
-*/
+
 
 
 
@@ -2134,7 +2134,7 @@ restore
 
 
 
-/* foreach update of local list {
+foreach update of local list {
 	
 	* graph Senegal LANL daily deaths each update 
 	
@@ -2152,7 +2152,7 @@ restore
 	qui graph export "graph 01 Senegal LANL daily deaths update `update'.pdf", replace	
 
 }
-*/
+
 
 
 
