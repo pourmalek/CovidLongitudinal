@@ -476,7 +476,7 @@ restore
 
 
 
-/* foreach update of local list {
+foreach update of local list {
 	
 	* graph Taiwan IHME daily deaths each update 
 	
@@ -494,7 +494,7 @@ restore
 	qui graph export "graph 01 Taiwan IHME daily deaths update `update'.pdf", replace	
 
 }
-*/
+
 
 
 
@@ -800,7 +800,7 @@ restore
 
 
 
-/* foreach update of local list {
+foreach update of local list {
 	
 	* graph Taiwan IMPE daily deaths each update 
 	
@@ -818,7 +818,7 @@ restore
 	qui graph export "graph 01 Taiwan IMPE daily deaths update `update'.pdf", replace	
 
 }
-*/
+
 
 
 
@@ -1060,7 +1060,7 @@ restore
 
 
 
-/* foreach update of local list {
+foreach update of local list {
 	
 	* graph Taiwan LANL daily deaths each update 
 	
@@ -1078,7 +1078,7 @@ restore
 	qui graph export "graph 01 Taiwan LANL daily deaths update `update'.pdf", replace	
 
 }
-*/
+
 
 
 
