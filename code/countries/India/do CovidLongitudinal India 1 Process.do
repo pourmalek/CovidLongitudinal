@@ -663,7 +663,7 @@ restore
 
 
 
-/* foreach update of local list {
+foreach update of local list {
 	
 	* graph India DELP daily deaths each update 
 	
@@ -681,7 +681,7 @@ restore
 	qui graph export "graph 01 India DELP daily deaths update `update'.pdf", replace	
 
 }
-*/
+
 
 
 
@@ -1260,7 +1260,7 @@ restore
 
 
 
-/* foreach update of local list {
+foreach update of local list {
 	
 	* graph India IHME daily deaths each update 
 	
@@ -1278,7 +1278,7 @@ restore
 	qui graph export "graph 01 India IHME daily deaths update `update'.pdf", replace	
 
 }
-*/
+
 
 
 
@@ -1668,7 +1668,7 @@ restore
 
 
 
-/* foreach update of local list {
+foreach update of local list {
 	
 	* graph India IMPE daily deaths each update 
 	
@@ -1686,7 +1686,7 @@ restore
 	qui graph export "graph 01 India IMPE daily deaths update `update'.pdf", replace	
 
 }
-*/
+
 
 
 
@@ -2120,7 +2120,7 @@ restore
 
 
 
-/* foreach update of local list {
+foreach update of local list {
 	
 	* graph India LANL daily deaths each update 
 	
@@ -2138,7 +2138,7 @@ restore
 	qui graph export "graph 01 India LANL daily deaths update `update'.pdf", replace	
 
 }
-*/
+
 
 
 
@@ -2455,7 +2455,7 @@ restore
 
 
 
-/* foreach update of local list {
+foreach update of local list {
 	
 	* graph India UCLA daily deaths each update 
 	
@@ -2473,7 +2473,7 @@ restore
 	qui graph export "graph 01 India UCLA daily deaths update `update'.pdf", replace	
 
 }
-*/
+
 
 
 * graph India UCLA daily deaths all updates
@@ -2833,7 +2833,7 @@ restore
 
 
 
-/* foreach update of local list {
+foreach update of local list {
 	
 	* graph India YYGU daily deaths each update 
 	
@@ -2851,7 +2851,7 @@ restore
 	qui graph export "graph 01 India YYGU daily deaths update `update'.pdf", replace	
 
 }
-*/
+
 
 
 
