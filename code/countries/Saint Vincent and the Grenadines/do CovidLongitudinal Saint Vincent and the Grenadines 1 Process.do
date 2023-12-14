@@ -215,7 +215,7 @@ twoway ///
 if date >= td(01jan2020) & date <= td(01jan2023) ///
 , xtitle(Date) xlabel(#12, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
 xlabel(, angle(forty_five)) ylabel(, labsize(small) angle(forty_five) format(%30.1fc)) ///
-ytitle(Daily deaths) title("C19 daily deaths, Saint Vincent and the Grenadines, JOHN", size(medium) color(black)) ///
+ytitle(Daily deaths) title("C19 daily deaths, Saint Vincent and the Grenadines, JOHN", size(medsmall) color(black)) ///
 xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2))
 
 qui graph export "graph 02 Saint Vincent and the Grenadines JOHN C19 daily deaths reported.pdf", replace
@@ -563,7 +563,7 @@ twoway ///
 (line DayDeaMeFoIMPE20221225 date, sort lwidth(thin) lcolor(magenta)) ///
 , xtitle(Date) xlabel(#12, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
 xlabel(, angle(forty_five)) ylabel(, labsize(small) angle(forty_five) format(%30.0fc)) ///
-ytitle(Daily deaths) title("C19 daily deaths, Saint Vincent and the Grenadines, IMPE, all updates", size(medium) color(black)) ///
+ytitle(Daily deaths) title("C19 daily deaths, Saint Vincent and the Grenadines, IMPE, all updates", size(medsmall) color(black)) ///
 legend(position(6) order(1 "JOHN" 2 "IMPE forecast ") rows(1) size(small)) legend(region(lcolor(none))) legend(bexpand) ///
 xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2))
 
@@ -727,7 +727,7 @@ twoway ///
 if date >= td(01jan2020) & date <= td(01jan2023) ///
 , xtitle(Date) xlabel(#12, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
 xlabel(, angle(forty_five)) ylabel(, labsize(small) angle(forty_five) format(%30.0fc)) ///
-ytitle(Daily deaths) title("C19 daily deaths, Saint Vincent and the Grenadines, all models, all updates, forecast only", size(medium) color(black)) ///
+ytitle(Daily deaths) title("C19 daily deaths, Saint Vincent and the Grenadines, all models, all updates, forecast only", size(medsmall) color(black)) ///
 legend(position(6) order(68 "JOHN" 1 "IMPE") ///
 rows(1) size(small)) legend(region(lcolor(none))) legend(bexpand) ///
 xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2))

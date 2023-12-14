@@ -155,7 +155,7 @@ twoway ///
 if date >= td(01jan2020) & date <= td(01jan2023) ///
 , xtitle(Date) xlabel(#12, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
 xlabel(, angle(forty_five)) ylabel(, labsize(small) angle(forty_five) format(%30.0fc)) ///
-ytitle(Daily deaths error measure) title("C19 daily deaths error", size(medium) color(black)) /// 
+ytitle(Daily deaths error measure) title("C19 daily deaths error", size(small) color(black)) /// 
 xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) yscale(titlegap(3)) ///
 subtitle("Saint Vincent and the Grenadines, all Models, all updates, forecast only", size(small)) ///
 legend(position(6) order(1 "IMPE") ///
@@ -246,7 +246,7 @@ twoway ///
 if date >= td(01jan2020) & date <= td(01jan2023) ///
 , xtitle(Date) xlabel(#12, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
 xlabel(, angle(forty_five)) ylabel(, labsize(small) angle(forty_five) format(%30.0fc)) ///
-ytitle(Daily deaths error measure) title("C19 daily deaths absolute error", size(medium) color(black)) /// 
+ytitle(Daily deaths error measure) title("C19 daily deaths absolute error", size(small) color(black)) /// 
 xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) yscale(titlegap(3)) ///
 subtitle("Saint Vincent and the Grenadines, all Models, all updates, forecast only", size(small)) ///
 legend(position(6) order(1 "IMPE") ///
@@ -336,7 +336,7 @@ twoway ///
 if date >= td(01jan2020) & date <= td(01jan2023) ///
 , xtitle(Date) xlabel(#12, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
 xlabel(, angle(forty_five)) ylabel(, labsize(small) angle(forty_five) format(%30.0fc)) ///
-ytitle(Daily deaths error measure) title("C19 daily deaths percent error", size(medium) color(black)) /// 
+ytitle(Daily deaths error measure) title("C19 daily deaths percent error", size(small) color(black)) /// 
 xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) yscale(titlegap(3)) ///
 subtitle("Saint Vincent and the Grenadines, all Models, all updates, forecast only", size(small)) ///
 legend(position(6) order(1 "IMPE") ///
@@ -429,7 +429,7 @@ twoway ///
 if date >= td(01jan2020) & date <= td(01jan2023) ///
 , xtitle(Date) xlabel(#12, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
 xlabel(, angle(forty_five)) ylabel(, labsize(small) angle(forty_five) format(%30.0fc)) ///
-ytitle(Daily deaths error measure) title("C19 daily deaths absolute percent error", size(medium) color(black)) /// 
+ytitle(Daily deaths error measure) title("C19 daily deaths absolute percent error", size(small) color(black)) /// 
 xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) yscale(titlegap(3)) ///
 subtitle("Saint Vincent and the Grenadines, ALL MODELS, all updates, forecast only", size(small)) ///
 legend(position(6) order(1 "IMPE") ///
@@ -452,7 +452,7 @@ twoway ///
 if date >= td(01jan2020) & date <= td(01jan2023) ///
 , xtitle(Date) xlabel(#12, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
 xlabel(, angle(forty_five)) ylabel(, labsize(small) angle(forty_five) format(%30.0fc)) ///
-ytitle(Daily deaths error measure) title("C19 daily deaths, average median error", size(medium) color(black)) /// 
+ytitle(Daily deaths error measure) title("C19 daily deaths, average median error", size(small) color(black)) /// 
 subtitle("Saint Vincent and the Grenadines, all Models, forecast only", size(small)) xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) ///
 xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) yscale(titlegap(3)) ///
 legend(position(6) order(1 "IMPE") ///
@@ -477,7 +477,7 @@ twoway ///
 if date >= td(01jan2020) & date <= td(01jan2023) ///
 , xtitle(Date) xlabel(#12, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
 xlabel(, angle(forty_five)) ylabel(, labsize(small) angle(forty_five) format(%30.0fc)) ///
-ytitle(Daily deaths error measure) title("C19 daily deaths, average median error", size(medium) color(black)) /// 
+ytitle(Daily deaths error measure) title("C19 daily deaths, average median error", size(small) color(black)) /// 
 subtitle("Saint Vincent and the Grenadines, all Models, forecast only; smoothed for better viewing", size(small)) xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) ///
 xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) yscale(titlegap(3)) ///
 legend(position(6) order(1 "IMPE") ///
@@ -503,7 +503,7 @@ twoway ///
 if date >= td(01jan2020) & date <= td(01jan2023) ///
 , xtitle(Date) xlabel(#12, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
 xlabel(, angle(forty_five)) ylabel(, labsize(small) angle(forty_five) format(%30.0fc)) ///
-ytitle(Daily deaths error measure) title("C19 daily deaths, average median absolute error", size(medium) color(black)) /// 
+ytitle(Daily deaths error measure) title("C19 daily deaths, average median absolute error", size(small) color(black)) /// 
 subtitle("Saint Vincent and the Grenadines, all Models, forecast only", size(small)) xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) ///
 xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) yscale(titlegap(3)) ///
 legend(position(6) order(1 "IMPE") ///
@@ -528,7 +528,7 @@ twoway ///
 if date >= td(01jan2020) & date <= td(01jan2023) ///
 , xtitle(Date) xlabel(#12, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
 xlabel(, angle(forty_five)) ylabel(, labsize(small) angle(forty_five) format(%30.0fc)) ///
-ytitle(Daily deaths error measure) title("C19 daily deaths, average median absolute error", size(medium) color(black)) /// 
+ytitle(Daily deaths error measure) title("C19 daily deaths, average median absolute error", size(small) color(black)) /// 
 subtitle("Saint Vincent and the Grenadines, all Models, forecast only; smoothed for better viewing", size(small)) xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) ///
 xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) yscale(titlegap(3)) ///
 legend(position(6) order(1 "IMPE") ///
@@ -554,7 +554,7 @@ twoway ///
 if date >= td(01jan2020) & date <= td(01jan2023) ///
 , xtitle(Date) xlabel(#12, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
 xlabel(, angle(forty_five)) ylabel(, labsize(small) angle(forty_five) format(%30.0fc)) ///
-ytitle(Daily deaths error measure) title("C19 daily deaths, average median percent error", size(medium) color(black)) /// 
+ytitle(Daily deaths error measure) title("C19 daily deaths, average median percent error", size(small) color(black)) /// 
 subtitle("Saint Vincent and the Grenadines, all Models, forecast only", size(small)) xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) ///
 xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) yscale(titlegap(3)) ///
 legend(position(6) order(1 "IMPE") ///
@@ -579,7 +579,7 @@ twoway ///
 if date >= td(01jan2020) & date <= td(01jan2023) ///
 , xtitle(Date) xlabel(#12, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
 xlabel(, angle(forty_five)) ylabel(, labsize(small) angle(forty_five) format(%30.0fc)) ///
-ytitle(Daily deaths error measure) title("C19 daily deaths, average median percent error", size(medium) color(black)) /// 
+ytitle(Daily deaths error measure) title("C19 daily deaths, average median percent error", size(small) color(black)) /// 
 subtitle("Saint Vincent and the Grenadines, all Models, forecast only; smoothed for better viewing", size(small)) xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) ///
 xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) yscale(titlegap(3)) ///
 legend(position(6) order(1 "IMPE") ///
@@ -604,7 +604,7 @@ twoway ///
 if date >= td(01jan2020) & date <= td(01jan2023) ///
 , xtitle(Date) xlabel(#12, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
 xlabel(, angle(forty_five)) ylabel(, labsize(small) angle(forty_five) format(%30.0fc)) ///
-ytitle(Daily deaths error measure) title("C19 daily deaths, average median absolute percent error", size(medium) color(black)) /// 
+ytitle(Daily deaths error measure) title("C19 daily deaths, average median absolute percent error", size(small) color(black)) /// 
 subtitle("Saint Vincent and the Grenadines, all Models, forecast only", size(small)) xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) ///
 xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) yscale(titlegap(3)) ///
 legend(position(6) order(1 "IMPE") ///
@@ -624,7 +624,7 @@ twoway ///
 if date >= td(01jan2020) & date <= td(01jan2023) ///
 , xtitle(Date) xlabel(#12, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
 xlabel(, angle(forty_five)) ylabel(, labsize(small) angle(forty_five) format(%30.0fc)) ///
-ytitle(Daily deaths error measure) title("C19 daily deaths, average median absolute percent error", size(medium) color(black)) /// 
+ytitle(Daily deaths error measure) title("C19 daily deaths, average median absolute percent error", size(small) color(black)) /// 
 subtitle("Saint Vincent and the Grenadines, all Models, forecast only; smoothed for better viewing", size(small)) xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) ///
 xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) yscale(titlegap(3)) ///
 legend(position(6) order(1 "IMPE") ///
