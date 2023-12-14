@@ -504,6 +504,310 @@ list region `var' country if region != "" & region == "WPRO", noobs clean // max
 
 
 
+*****************************************************
+*****************************************************
+*****************************************************
+
+* graphs
+
+
+* graph daily deaths, DELP model, Absolute Percent Error vs Error
+
+twoway (scatter DD_DELP_AbPeEr DD_DELP_Errorr, sort msymbol(none) mlabel(iso) mlabcolor(red) mlabposition(0)) ///
+, ytitle("Absolute Percent Error") xtitle("Error") ylabel(, format(%9.0gc)) ///
+title("C19 daily deaths, DELP model, Absolute Percent Error vs Error, 2020-2022", size(3))
+
+graph export "graph 11 C19 daily deaths, DELP model, Absolute Percent Error vs Error, 2020-2022.pdf", replace
+
+
+
+* graph daily deaths, DELP model, Absolute Percent Error vs Error, y log
+
+twoway (scatter DD_DELP_AbPeEr DD_DELP_Errorr, sort msymbol(none) mlabel(iso) mlabcolor(red) mlabposition(0)) ///
+, ytitle("Absolute Percent Error") xtitle("Error") ///
+yscale(log) ylabel(, angle(horizontal) format(%9.0g)) ///
+title("C19 daily deaths, DELP model, Absolute Percent Error vs Error, 2020-2022", size(3))
+
+graph export "graph 12 C19 daily deaths, DELP model, Absolute Percent Error vs Error, 2020-2022, y log.pdf", replace
+
+
+
+* graph daily deaths, DELP model, Absolute Percent Error vs Error, y capped
+
+twoway (scatter DD_DELP_AbPeEr DD_DELP_Errorr, sort msymbol(none) mlabel(iso) mlabcolor(red) mlabposition(0)) ///
+if DD_DELP_AbPeEr < 20000 ///
+, ytitle("Absolute Percent Error") xtitle("Error") ///
+title("C19 daily deaths, DELP model, Absolute Percent Error vs Error, 2020-2022" ///
+"Only countries with Absolute Percent Error < 20000 are shown", size(3)) 
+
+graph export "graph 13 C19 daily deaths, DELP model, Absolute Percent Error vs Error, 2020-2022, y capped.pdf", replace
+
+
+
+
+
+
+* graph daily deaths, IHME model, Absolute Percent Error vs Error
+
+twoway (scatter DD_IHME_AbPeEr DD_IHME_Errorr, sort msymbol(none) mlabel(iso) mlabcolor(balck) mlabposition(0)) ///
+, ytitle("Absolute Percent Error") xtitle("Error") ylabel(, format(%9.0gc)) ///
+title("C19 daily deaths, IHME model, Absolute Percent Error vs Error, 2020-2022", size(3))
+
+graph export "graph 21 C19 daily deaths, IHME model, Absolute Percent Error vs Error, 2020-2022.pdf", replace
+
+
+
+* graph daily deaths, IHME model, Absolute Percent Error vs Error, y log
+
+twoway (scatter DD_IHME_AbPeEr DD_IHME_Errorr, sort msymbol(none) mlabel(iso) mlabcolor(balck) mlabposition(0)) ///
+, ytitle("Absolute Percent Error") xtitle("Error") ///
+yscale(log) ylabel(, angle(horizontal) format(%9.0g)) ///
+title("C19 daily deaths, IHME model, Absolute Percent Error vs Error, 2020-2022", size(3))
+
+graph export "graph 22 C19 daily deaths, IHME model, Absolute Percent Error vs Error, 2020-2022, y log.pdf", replace
+
+
+
+* graph daily deaths, IHME model, Absolute Percent Error vs Error, y capped
+
+twoway (scatter DD_IHME_AbPeEr DD_IHME_Errorr, sort msymbol(none) mlabel(iso) mlabcolor(balck) mlabposition(0)) ///
+if DD_IHME_AbPeEr < 5000 ///
+, ytitle("Absolute Percent Error") xtitle("Error") ///
+title("C19 daily deaths, IHME model, Absolute Percent Error vs Error, 2020-2022" ///
+"Only countries with Absolute Percent Error < 5000 are shown", size(3)) 
+
+graph export "graph 23 C19 daily deaths, IHME model, Absolute Percent Error vs Error, 2020-2022, y capped.pdf", replace
+
+
+
+
+
+
+
+* graph daily deaths, IMPE model, Absolute Percent Error vs Error
+
+twoway (scatter DD_IMPE_AbPeEr DD_IMPE_Errorr, sort msymbol(none) mlabel(iso) mlabcolor(magenta) mlabposition(0)) ///
+, ytitle("Absolute Percent Error") xtitle("Error") ylabel(, format(%9.0gc)) ///
+title("C19 daily deaths, IMPE model, Absolute Percent Error vs Error, 2020-2022", size(3))
+
+graph export "graph 31 C19 daily deaths, IMPE model, Absolute Percent Error vs Error, 2020-2022.pdf", replace
+
+
+
+* graph daily deaths, IMPE model, Absolute Percent Error vs Error, y log
+
+twoway (scatter DD_IMPE_AbPeEr DD_IMPE_Errorr, sort msymbol(none) mlabel(iso) mlabcolor(magenta) mlabposition(0)) ///
+, ytitle("Absolute Percent Error") xtitle("Error") ///
+yscale(log) ylabel(, angle(horizontal) format(%9.0g)) ///
+title("C19 daily deaths, IMPE model, Absolute Percent Error vs Error, 2020-2022", size(3))
+
+graph export "graph 32 C19 daily deaths, IMPE model, Absolute Percent Error vs Error, 2020-2022, y log.pdf", replace
+
+
+
+* graph daily deaths, IMPE model, Absolute Percent Error vs Error, y capped
+
+twoway (scatter DD_IMPE_AbPeEr DD_IMPE_Errorr, sort msymbol(none) mlabel(iso) mlabcolor(magenta) mlabposition(0)) ///
+if DD_IMPE_AbPeEr < 20000 ///
+, ytitle("Absolute Percent Error") xtitle("Error") ///
+title("C19 daily deaths, IMPE model, Absolute Percent Error vs Error, 2020-2022" ///
+"Only countries with Absolute Percent Error < 20000 are shown", size(3)) 
+
+graph export "graph 33 C19 daily deaths, IMPE model, Absolute Percent Error vs Error, 2020-2022, y capped.pdf", replace
+
+
+
+
+
+
+
+* graph daily deaths, LANL model, Absolute Percent Error vs Error
+
+twoway (scatter DD_LANL_AbPeEr DD_LANL_Errorr, sort msymbol(none) mlabel(iso) mlabcolor(brown) mlabposition(0)) ///
+, ytitle("Absolute Percent Error") xtitle("Error") ylabel(, format(%9.0gc)) ///
+title("C19 daily deaths, LANL model, Absolute Percent Error vs Error, 2020-2022", size(3))
+
+graph export "graph 41 C19 daily deaths, LANL model, Absolute Percent Error vs Error, 2020-2022.pdf", replace
+
+
+
+* graph daily deaths, LANL model, Absolute Percent Error vs Error, y log
+
+twoway (scatter DD_LANL_AbPeEr DD_LANL_Errorr, sort msymbol(none) mlabel(iso) mlabcolor(brown) mlabposition(0)) ///
+, ytitle("Absolute Percent Error") xtitle("Error") ///
+yscale(log) ylabel(, angle(horizontal) format(%9.0g)) ///
+title("C19 daily deaths, LANL model, Absolute Percent Error vs Error, 2020-2022", size(3))
+
+graph export "graph 42 C19 daily deaths, LANL model, Absolute Percent Error vs Error, 2020-2022, y log.pdf", replace
+
+
+
+* graph daily deaths, LANL model, Absolute Percent Error vs Error, y capped
+
+twoway (scatter DD_LANL_AbPeEr DD_LANL_Errorr, sort msymbol(none) mlabel(iso) mlabcolor(brown) mlabposition(0)) ///
+if DD_LANL_AbPeEr < 500 ///
+, ytitle("Absolute Percent Error") xtitle("Error") ///
+title("C19 daily deaths, LANL model, Absolute Percent Error vs Error, 2020-2022" ///
+"Only countries with Absolute Percent Error < 500 are shown", size(3)) 
+
+graph export "graph 43 C19 daily deaths, LANL model, Absolute Percent Error vs Error, 2020-2022, y capped.pdf", replace
+
+
+
+
+
+
+* graph daily deaths, UCLA model, Absolute Percent Error vs Error
+
+twoway (scatter DD_UCLA_AbPeEr DD_UCLA_Errorr, sort msymbol(none) mlabel(iso) mlabcolor(blue) mlabposition(0)) ///
+, ytitle("Absolute Percent Error") xtitle("Error") ylabel(, format(%9.0gc)) ///
+title("C19 daily deaths, UCLA model, Absolute Percent Error vs Error, 2020-2022", size(3))
+
+graph export "graph 51 C19 daily deaths, UCLA model, Absolute Percent Error vs Error, 2020-2022.pdf", replace
+
+
+
+* graph daily deaths, UCLA model, Absolute Percent Error vs Error, y log
+
+twoway (scatter DD_UCLA_AbPeEr DD_UCLA_Errorr, sort msymbol(none) mlabel(iso) mlabcolor(blue) mlabposition(0)) ///
+, ytitle("Absolute Percent Error") xtitle("Error") ///
+yscale(log) ylabel(, angle(horizontal) format(%9.0g)) ///
+title("C19 daily deaths, UCLA model, Absolute Percent Error vs Error, 2020-2022", size(3))
+
+graph export "graph 52 C19 daily deaths, UCLA model, Absolute Percent Error vs Error, 2020-2022, y log.pdf", replace
+
+
+
+* graph daily deaths, UCLA model, Absolute Percent Error vs Error, y capped
+
+twoway (scatter DD_UCLA_AbPeEr DD_UCLA_Errorr, sort msymbol(none) mlabel(iso) mlabcolor(blue) mlabposition(0)) ///
+if DD_UCLA_AbPeEr < 100 ///
+, ytitle("Absolute Percent Error") xtitle("Error") ///
+title("C19 daily deaths, UCLA model, Absolute Percent Error vs Error, 2020-2022" ///
+"Only countries with Absolute Percent Error < 100 are shown", size(3)) 
+
+graph export "graph 53 C19 daily deaths, UCLA model, Absolute Percent Error vs Error, 2020-2022, y capped.pdf", replace
+
+
+
+
+
+
+
+* graph daily deaths, YYGU model, Absolute Percent Error vs Error
+
+twoway (scatter DD_YYGU_AbPeEr DD_YYGU_Errorr, sort msymbol(none) mlabel(iso) mlabcolor(gold*1.1) mlabposition(0)) ///
+, ytitle("Absolute Percent Error") xtitle("Error") ylabel(, format(%9.0gc)) ///
+title("C19 daily deaths, YYGU model, Absolute Percent Error vs Error, 2020-2022", size(3))
+
+graph export "graph 61 C19 daily deaths, YYGU model, Absolute Percent Error vs Error, 2020-2022.pdf", replace
+
+
+
+* graph daily deaths, YYGU model, Absolute Percent Error vs Error, y log
+
+twoway (scatter DD_YYGU_AbPeEr DD_YYGU_Errorr, sort msymbol(none) mlabel(iso) mlabcolor(gold*1.1) mlabposition(0)) ///
+, ytitle("Absolute Percent Error") xtitle("Error") ///
+yscale(log) ylabel(, angle(horizontal) format(%9.0g)) ///
+title("C19 daily deaths, YYGU model, Absolute Percent Error vs Error, 2020-2022", size(3))
+
+graph export "graph 62 C19 daily deaths, YYGU model, Absolute Percent Error vs Error, 2020-2022, y log.pdf", replace
+
+
+
+* graph daily deaths, YYGU model, Absolute Percent Error vs Error, y capped
+
+twoway (scatter DD_YYGU_AbPeEr DD_YYGU_Errorr, sort msymbol(none) mlabel(iso) mlabcolor(gold*1.1) mlabposition(0)) ///
+if DD_YYGU_AbPeEr < 500 ///
+, ytitle("Absolute Percent Error") xtitle("Error") ///
+title("C19 daily deaths, YYGU model, Absolute Percent Error vs Error, 2020-2022" ///
+"Only countries with Absolute Percent Error < 500 are shown", size(3)) 
+
+graph export "graph 63 C19 daily deaths, YYGU model, Absolute Percent Error vs Error, 2020-2022, y capped.pdf", replace
+
+
+
+
+
+
+
+* graph daily deaths, mean of models, Absolute Percent Error vs Error
+
+twoway (scatter DD_MODELS_AbPeEr DD_MODELS_Errorr, sort msymbol(none) mlabel(iso) mlabcolor(orange) mlabposition(0)) ///
+, ytitle("Absolute Percent Error") xtitle("Error") ylabel(, format(%9.0gc)) ///
+title("C19 daily deaths, mean of models, Absolute Percent Error vs Error, 2020-2022", size(3))
+
+graph export "graph 71 C19 daily deaths, mean of models, Absolute Percent Error vs Error, 2020-2022.pdf", replace
+
+
+
+* graph daily deaths, mean of models, Absolute Percent Error vs Error, y log
+
+twoway (scatter DD_MODELS_AbPeEr DD_MODELS_Errorr, sort msymbol(none) mlabel(iso) mlabcolor(orange) mlabposition(0)) ///
+, ytitle("Absolute Percent Error") xtitle("Error") ///
+yscale(log) ylabel(, angle(horizontal) format(%9.0g)) ///
+title("C19 daily deaths, mean of models, Absolute Percent Error vs Error, 2020-2022", size(3))
+
+graph export "graph 72 C19 daily deaths, mean of models, Absolute Percent Error vs Error, 2020-2022, y log.pdf", replace
+
+
+
+* graph daily deaths, mean of models, Absolute Percent Error vs Error, y capped
+
+twoway (scatter DD_MODELS_AbPeEr DD_MODELS_Errorr, sort msymbol(none) mlabel(iso) mlabcolor(orange) mlabposition(0)) ///
+if DD_MODELS_AbPeEr < 5000 ///
+, ytitle("Absolute Percent Error") xtitle("Error") ///
+title("C19 daily deaths, mean of models, Absolute Percent Error vs Error, 2020-2022" ///
+"Only countries with Absolute Percent Error < 5000 are shown", size(3)) 
+
+graph export "graph 73 C19 daily deaths, mean of models, Absolute Percent Error vs Error, 2020-2022, y capped.pdf", replace
+
+
+
+
+* graph daily deaths, all models, Absolute Percent Error vs Error
+
+twoway (scatter DD_DELP_AbPeEr DD_DELP_Errorr, sort msymbol(circle_hollow) msize(2-pt) mcolor(red)) ///
+|| (scatter DD_IHME_AbPeEr DD_IHME_Errorr, sort msymbol(circle_hollow) msize(2-pt) mcolor(balck)) ///
+|| (scatter DD_IMPE_AbPeEr DD_IMPE_Errorr, sort msymbol(circle_hollow) msize(2-pt) mcolor(magenta)) ///
+|| (scatter DD_LANL_AbPeEr DD_LANL_Errorr, sort msymbol(circle_hollow) msize(2-pt) mcolor(brown)) ///
+|| (scatter DD_UCLA_AbPeEr DD_UCLA_Errorr, sort msymbol(circle_hollow) msize(2-pt) mcolor(blue)) ///
+|| (scatter DD_YYGU_AbPeEr DD_YYGU_Errorr, sort msymbol(circle_hollow)msize(2-pt)  mcolor(gold*1.1) ) ///
+, ytitle("Absolute Percent Error") xtitle("Error") ylabel(, format(%9.0gc)) ///
+title("C19 daily deaths, all models, Absolute Percent Error vs Error, 2020-2022", size(3)) ///
+legend(position(6) order(1 "DELP" 2 "IHME" 3 "IMPE" 4 "LANL" 5 "UCLA" 6 "YYGU") ///
+rows(1) size(small)) legend(region(lcolor(none))) legend(bexpand) 
+
+graph export "graph 81 C19 daily deaths, all models, Absolute Percent Error vs Error, 2020-2022.pdf", replace
+
+
+* y log not useful for multiple scatters
+
+
+* graph daily deaths, all models, Absolute Percent Error vs Error, y log
+
+twoway (scatter DD_DELP_AbPeEr DD_DELP_Errorr, sort msymbol(circle_hollow) msize(2-pt) mcolor(red)) ///
+|| (scatter DD_IHME_AbPeEr DD_IHME_Errorr, sort msymbol(circle_hollow) msize(2-pt) mcolor(balck)) ///
+|| (scatter DD_IMPE_AbPeEr DD_IMPE_Errorr, sort msymbol(circle_hollow) msize(2-pt) mcolor(magenta)) ///
+|| (scatter DD_LANL_AbPeEr DD_LANL_Errorr, sort msymbol(circle_hollow) msize(2-pt) mcolor(brown)) ///
+|| (scatter DD_UCLA_AbPeEr DD_UCLA_Errorr, sort msymbol(circle_hollow) msize(2-pt) mcolor(blue)) ///
+|| (scatter DD_YYGU_AbPeEr DD_YYGU_Errorr, sort msymbol(circle_hollow)msize(2-pt)  mcolor(gold*1.1) ) ///
+if DD_DELP_AbPeEr < 5000 & DD_IHME_AbPeEr < 5000 & DD_IMPE_AbPeEr < 5000 & ///
+DD_LANL_AbPeEr < 5000 & DD_UCLA_AbPeEr < 5000 & DD_YYGU_AbPeEr < 5000 ///
+, ytitle("Absolute Percent Error") xtitle("Error") ylabel(, format(%9.0gc)) ///
+title("C19 daily deaths, all models, Absolute Percent Error vs Error, 2020-2022" ///
+"Only countries with Absolute Percent Error < 5000 are shown", size(3)) ///
+legend(position(6) order(1 "DELP" 2 "IHME" 3 "IMPE" 4 "LANL" 5 "UCLA" 6 "YYGU") ///
+rows(1) size(small)) legend(region(lcolor(none))) legend(bexpand) 
+
+graph export "graph 83 C19 daily deaths, all models, Absolute Percent Error vs Error, 2020-2022, y capped.pdf", replace
+
+
+
+
+
+
+
 
 
 
