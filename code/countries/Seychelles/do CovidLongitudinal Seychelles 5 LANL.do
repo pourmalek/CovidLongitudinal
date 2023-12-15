@@ -687,7 +687,7 @@ twoway ///
 (line DDPerErrLANL20210926 date, sort lcolor(brown) lwidth(thin)) ///
 if date >= td(01jan2020) & date <= td(01jan2023) ///
 , xtitle(Date) xlabel(#12, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
-xlabel(, angle(forty_five)) ylabel(, labsize(small) angle(forty_five) format(%30.0fc)) ///
+xlabel(, angle(forty_five)) ylabel(, labsize(small) angle(forty_five) format(%30.1fc)) ///
 ytitle(Daily deaths error measure) title("C19 daily deaths percent error", size(medium) color(black)) /// 
 xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(off) yscale(titlegap(3)) ///
 subtitle("Seychelles, LANL, all updates, forecast only", size(small))
@@ -745,7 +745,7 @@ twoway ///
 (line DDAbPeErLANL20210926 date, sort lcolor(brown) lwidth(thin)) ///
 if date >= td(01jan2020) & date <= td(01jan2023) ///
 , xtitle(Date) xlabel(#12, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
-xlabel(, angle(forty_five)) ylabel(, labsize(small) angle(forty_five) format(%30.0fc)) ///
+xlabel(, angle(forty_five)) ylabel(, labsize(small) angle(forty_five) format(%30.1fc)) ///
 ytitle(Daily deaths error measure) title("C19 daily deaths absolute percent error", size(medium) color(black)) /// 
 xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(off) yscale(titlegap(3)) ///
 subtitle("Seychelles, LANL, all updates, forecast only", size(small))
@@ -861,7 +861,7 @@ twoway ///
 (line DDPerErrLANL_Mean1 date, sort lcolor(brown) lwidth(medium)) /// 
 if date >= td(01jan2020) & date <= td(01jan2023) ///
 , xtitle(Date) xlabel(#12, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
-xlabel(, angle(forty_five)) ylabel(, labsize(small) angle(forty_five) format(%30.0fc)) ///
+xlabel(, angle(forty_five)) ylabel(, labsize(small) angle(forty_five) format(%30.1fc)) ///
 ytitle(Daily deaths error measure) title("C19 daily deaths, average median percent error", size(medium) color(black)) /// 
 subtitle("Seychelles, LANL, forecast only", size(small)) xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) ///
 xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(off) yscale(titlegap(3))
@@ -908,7 +908,7 @@ twoway ///
 (line DDAbPeErLANL_Mean1 date, sort lcolor(brown) lwidth(medium)) /// 
 if date >= td(01jan2020) & date <= td(01jan2023) ///
 , xtitle(Date) xlabel(#12, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
-xlabel(, angle(forty_five)) ylabel(, labsize(small) angle(forty_five) format(%30.0fc)) ///
+xlabel(, angle(forty_five)) ylabel(, labsize(small) angle(forty_five) format(%30.1fc)) ///
 ytitle(Daily deaths error measure) title("C19 daily deaths, average median absolute percent error", size(medium) color(black)) /// 
 subtitle("Seychelles, LANL, forecast only", size(small)) xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) ///
 xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(off) yscale(titlegap(3))

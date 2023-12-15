@@ -659,7 +659,7 @@ restore
 	(line DayDeaMeFoDELP`update' date, sort lwidth(thin) lcolor(red)) /// 
 	if date >= td(01Jan2020) & date <= td(01Jan2023) ///
 	, xtitle(Date) xlabel(#12, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
-	xlabel(, angle(forty_five)) ylabel(, labsize(small) angle(forty_five) format(%30.0fc)) ///
+	xlabel(, angle(forty_five)) ylabel(, labsize(small) angle(forty_five) format(%30.1fc)) ///
 	ytitle(Daily deaths) title("C19 daily deaths, DELP, update `update'", size(medium) color(black)) ///
 	xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
 	subtitle("Seychelles, forecast only") legend(position(6) order(1 "JOHN" 2 "DELP forecast ") rows(1) size(small)) ///
@@ -1190,7 +1190,7 @@ restore
 	(line DayDeaMeFoLANL`update' date, sort lwidth(thin) lcolor(brown)) /// 
 	if date >= td(01Jan2020) & date <= td(01Jan2023) ///
 	, xtitle(Date) xlabel(#12, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
-	xlabel(, angle(forty_five)) ylabel(, labsize(small) angle(forty_five) format(%30.0fc)) ///
+	xlabel(, angle(forty_five)) ylabel(, labsize(small) angle(forty_five) format(%30.1fc)) ///
 	ytitle(Daily deaths) title("C19 daily deaths, LANL, update `update'", size(medium) color(black)) ///
 	xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
 	subtitle("Seychelles, forecast only") legend(position(6) order(1 "JOHN" 2 "LANL forecast ") rows(1) size(small)) ///
@@ -1666,7 +1666,7 @@ twoway ///
 (line DayDeaMeSmJOHNSYC date, sort lwidth(thick) lcolor(cyan)) /// 
 if date >= td(01jan2020) & date <= td(01jan2023) ///
 , xtitle(Date) xlabel(#12, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) ///
-xlabel(, angle(forty_five)) ylabel(, labsize(small) angle(forty_five) format(%30.0fc)) ///
+xlabel(, angle(forty_five)) ylabel(, labsize(small) angle(forty_five) format(%30.1fc)) ///
 ytitle(Daily deaths) title("C19 daily deaths, Seychelles, all models, all updates, forecast only", size(medium) color(black)) ///
 legend(position(6) order(337 "JOHN" 1 "DELP" 19 "LANL") ///
 rows(1) size(small)) legend(region(lcolor(none))) legend(bexpand) ///
