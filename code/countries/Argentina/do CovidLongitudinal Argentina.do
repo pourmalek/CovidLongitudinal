@@ -60,4 +60,6 @@ do "do CovidLongitudinal Argentina 9 Merge.do"
 ** Merge models 
 
 
+do "do CovidLongitudinal Argentina days.do"
+* run code for looking at number of forecast days
 
