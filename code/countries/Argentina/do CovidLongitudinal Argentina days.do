@@ -637,7 +637,7 @@ twoway (connected DELP_days date, sort mcolor(red) lcolor(red)) ///
 (connected IMPE_days date, sort mcolor(magenta) lcolor(magenta)) ///
 (connected LANL_days date, sort mcolor(brown) lcolor(brown)) ///
 (connected UCLA_days date, sort mcolor(blue) lcolor(blue)) ///
-(connected YYGU_days date, sort mcolor(black) lcolor(black)) ///
+(connected YYGU_days date, sort mcolor(gold) lcolor(gold)) ///
 , xtitle(Date) xlabel(#12, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) xlabel(, angle(forty_five)) ///
 ytitle(Forecast days) title("C19 daily deaths, Argentina, all models, forecast days, all updates", size(medium) color(black)) ///
 legend(position(6) order(1 "DELP" 2 "IHME" 3 "IMPE" 4 "LANL" 5 "UCLA" 6 "YYGU") ///
