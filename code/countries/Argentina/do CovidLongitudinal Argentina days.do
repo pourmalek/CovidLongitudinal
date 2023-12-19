@@ -136,7 +136,7 @@ save "Argentina DELP days long.dta", replace
 
 twoway (connected DELP_days DELP_update_num, sort) ///
 , xtitle(Update number) xlabel(, grid) xlabel(, grid) ///
-ytitle(Forecast days) title("C19 daily deaths, Argentina, DELP model, forecast days, all updates", size(medium) color(black)) ///
+ytitle(Forecast days) title("C19 daily deaths, Argentina, DELP model, forecast days, 2020-22", size(medium) color(black)) ///
 xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2))
 
 graph export "graph 201 C19 daily deaths, Argentina, DELP model, forecast days, all updates.pdf", replace
@@ -223,7 +223,7 @@ save "Argentina IHME days long.dta", replace
 
 twoway (connected IHME_days IHME_update_num, sort) ///
 , xtitle(Update number) xlabel(, grid) xlabel(, grid) ///
-ytitle(Forecast days) title("C19 daily deaths, Argentina, IHME model, forecast days, all updates", size(medium) color(black)) ///
+ytitle(Forecast days) title("C19 daily deaths, Argentina, IHME model, forecast days, 2020-22", size(medium) color(black)) ///
 xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2))
 
 graph export "graph 202 C19 daily deaths, Argentina, IHME model, forecast days, all updates.pdf", replace
@@ -314,7 +314,7 @@ save "Argentina IMPE days long.dta", replace
 
 twoway (connected IMPE_days IMPE_update_num, sort) ///
 , xtitle(Update number) xlabel(, grid) xlabel(, grid) ///
-ytitle(Forecast days) title("C19 daily deaths, Argentina, IMPE model, forecast days, all updates", size(medium) color(black)) ///
+ytitle(Forecast days) title("C19 daily deaths, Argentina, IMPE model, forecast days, 2020-22", size(medium) color(black)) ///
 xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2))
 
 graph export "graph 203 C19 daily deaths, Argentina, IMPE model, forecast days, all updates.pdf", replace
@@ -404,7 +404,7 @@ save "Argentina LANL days long.dta", replace
 
 twoway (connected LANL_days LANL_update_num, sort) ///
 , xtitle(Update number) xlabel(, grid) xlabel(, grid) ///
-ytitle(Forecast days) title("C19 daily deaths, Argentina, LANL model, forecast days, all updates", size(medium) color(black)) ///
+ytitle(Forecast days) title("C19 daily deaths, Argentina, LANL model, forecast days, 2020-22", size(medium) color(black)) ///
 xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2))
 
 graph export "graph 204 C19 daily deaths, Argentina, LANL model, forecast days, all updates.pdf", replace
@@ -492,7 +492,7 @@ save "Argentina UCLA days long.dta", replace
 
 twoway (connected UCLA_days UCLA_update_num, sort) ///
 , xtitle(Update number) xlabel(, grid) xlabel(, grid) ///
-ytitle(Forecast days) title("C19 daily deaths, Argentina, UCLA model, forecast days, all updates", size(medium) color(black)) ///
+ytitle(Forecast days) title("C19 daily deaths, Argentina, UCLA model, forecast days, 2020-22", size(medium) color(black)) ///
 xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2))
 
 graph export "graph 205 C19 daily deaths, Argentina, UCLA model, forecast days, all updates.pdf", replace
@@ -580,7 +580,7 @@ save "Argentina YYGU days long.dta", replace
 
 twoway (connected YYGU_days YYGU_update_num, sort) ///
 , xtitle(Update number) xlabel(, grid) xlabel(, grid) ///
-ytitle(Forecast days) title("C19 daily deaths, Argentina, YYGU model, forecast days, all updates", size(medium) color(black)) ///
+ytitle(Forecast days) title("C19 daily deaths, Argentina, YYGU model, forecast days, 2020-22", size(medium) color(black)) ///
 xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2))
 
 graph export "graph 206 C19 daily deaths, Argentina, YYGU model, forecast days, all updates.pdf", replace
@@ -639,7 +639,7 @@ twoway (connected DELP_days date, sort mcolor(red) lcolor(red)) ///
 (connected UCLA_days date, sort mcolor(blue) lcolor(blue)) ///
 (connected YYGU_days date, sort mcolor(gold) lcolor(gold)) ///
 , xtitle(Date) xlabel(#12, format(%tdYY-NN-DD) labsize(small)) xlabel(, grid) xlabel(, grid) xlabel(, angle(forty_five)) ///
-ytitle(Forecast days) title("C19 daily deaths, Argentina, all models, forecast days, all updates", size(medium) color(black)) ///
+ytitle(Forecast days) title("C19 daily deaths, Argentina, all models, forecast days, 2020-22", size(medium) color(black)) ///
 legend(position(6) order(1 "DELP" 2 "IHME" 3 "IMPE" 4 "LANL" 5 "UCLA" 6 "YYGU") ///
 rows(1) size(small)) legend(region(lcolor(none))) legend(bexpand) ///
 xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2))
