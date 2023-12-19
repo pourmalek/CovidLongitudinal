@@ -36,11 +36,12 @@ clear mata
 
 macro drop _all
 
-set maxvar 32767 // If Stata MP & SE, else, according to the local machine
+set maxvar 32767 // Stata MP & SE
 
-set segmentsize 2g // If Stata MP 2-core, else, according to the local machine
+set segmentsize 2g // Stata MP 2-core
 
-// set min_memory 1520g // If Stata MP on a local machine with large memeory and hard, else, according to the local machine
+set min_memory 1520g // Stata MP on a 1.5TB computer
+
 
 
 * setup Stata path by operating system 
@@ -67,10 +68,6 @@ if regexm(c(os),"Mac") == 1 {
 }
 else if regexm(c(os),"Windows") {
 	global pathCovidLongitudinal = "C:\Users\\`usrnam'\Downloads\Downloads\CovidLongitudinal-main\code\"
-	
-	// if running Windows on Mac using virtualizers or emulators:
-	// global pathCovidLongitudinal = "\\Mac\Home\Downloads\CovidLongitudinal-main\code\" 
-
 }
 *      
 
@@ -135,6 +132,11 @@ do "$pathCovidLongitudinal/merge/do CovidLongitudinal merge.do"
 window manage close viewer _all
 
 
+do "$pathCovidLongitudinal/merge/do CovidLongitudinal coverage.do"
+* Count the number of countries included in each model
+
+
+di in red "End of CovidLongitudinal codes."
 
 log close _all
 
