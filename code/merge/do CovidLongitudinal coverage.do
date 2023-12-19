@@ -2025,12 +2025,12 @@ twoway ///
 if date >= td(01jan2020) & date <= td(01jan2023) ///
 , xtitle(Date) xlabel(, grid) xlabel(, grid) xlabel(#37, format(%tdYY-NN-DD) labsize(small)) ///
 xlabel(, angle(forty_five)) ylabel(, format(%9.0fc) labsize(small))  ylabel(, labsize(small) angle(horizontal)) ///
-ytitle(Number of countries) title("Number of countries included in C 19 epidemic models, 2020-21", size(medium)) ///
+ytitle(Number of countries) title("Number of countries included in C 19 epidemic models, 2020-22", size(medium)) ///
 xscale(lwidth(vthin) lcolor(gray*.2)) yscale(lwidth(vthin) lcolor(gray*.2)) legend(region(lcolor(none))) legend(bexpand) ///
 legend(position(6) order(1 "DELP" 2 "IHME" 3 "IMPE" 4 "LANL" 5 "UCLA" 6 "YYGU") ///
 rows(1) size(small)) legend(region(lcolor(none))) legend(bexpand) 
 
-graph export "graph 301 Number of countries included in C 19 epidemic models, 2020-21.pdf", replace
+graph export "graph 301 Number of countries included in C 19 epidemic models, 2020-22.pdf", replace
 
 
 
