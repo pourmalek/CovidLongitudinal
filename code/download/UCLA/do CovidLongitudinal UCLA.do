@@ -178,7 +178,7 @@ local list `" "01-03" "01-10" "02-06" "03-07" "03-15" "03-28" "04-04" "07-12" "0
 
 foreach update of local list {
 
-di in red "This is UCLA update 2020-" "`update'"
+di in red "This is UCLA update 2021-" "`update'"
 
 capture shell rm -r  "pred_world_`update'.csv"
 
@@ -212,9 +212,9 @@ gen update = "`update'"
 
 replace update = subinstr(update, "-", "",.)
 
-gen year2020 = "2020"
+gen year2021 = "2021"
 
-gen updatenew = year2020 + update
+gen updatenew = year2021 + update
 
 drop update
 
@@ -259,7 +259,7 @@ local list `" "02-28" "06-06" "06-14" "06-21" "06-27" "06-30" "07-06" "11-15" "'
 
 foreach update of local list {
 
-di in red "This is UCLA update pred_state_ 2020-" "`update'"
+di in red "This is UCLA update pred_state_ 2021-" "`update'"
 
 capture shell rm -r  "pred_state_`update'.csv"
 
@@ -293,9 +293,9 @@ gen update = "`update'"
 
 replace update = subinstr(update, "-", "",.)
 
-gen year2020 = "2020"
+gen year2021 = "2021"
 
-gen updatenew = year2020 + update
+gen updatenew = year2021 + update
 
 drop update
 
@@ -344,44 +344,44 @@ graph export "DayDeaMeRaUCLA USA `update'.pdf", replace */
 
 
 local list ///
-20200103 ///
-20200110 ///
-20200206 ///
-20200228 ///
-20200307 ///
-20200315 ///
-20200328 ///
-20200404 ///
-20200606 ///
-20200614 ///
-20200621 ///
-20200627 ///
-20200630 ///
-20200706 ///
-20200712 ///
-20200719 ///
-20200726 ///
-20200802 ///
-20200809 ///
-20200816 ///
-20200823 ///
-20200830 ///
-20200906 ///
-20200913 ///
-20200920 ///
-20200927 ///
-20201004 ///
-20201011 ///
-20201018 ///
-20201025 ///
-20201101 ///
-20201108 ///
-20201115 ///
-20201122 ///
-20201129 ///
-20201206 ///
-20201213 ///
-20201220
+20210103 ///
+20210110 ///
+20210206 ///
+20210228 ///
+20210307 ///
+20210315 ///
+20210328 ///
+20210404 ///
+20210606 ///
+20210614 ///
+20210621 ///
+20210627 ///
+20210630 ///
+20210706 ///
+20210712 ///
+20210719 ///
+20210726 ///
+20210802 ///
+20210809 ///
+20210816 ///
+20210823 ///
+20210830 ///
+20210906 ///
+20210913 ///
+20210920 ///
+20210927 ///
+20211004 ///
+20211011 ///
+20211018 ///
+20211025 ///
+20211101 ///
+20211108 ///
+20211115 ///
+20211122 ///
+20211129 ///
+20211206 ///
+20211213 ///
+20211220
 
 
 foreach update of local list {
@@ -403,7 +403,7 @@ foreach update of local list {
 
 
 
-use "UCLA 20200103 countries.dta" 
+use "UCLA 20210103 countries.dta" 
 
 
 foreach update of local list {
