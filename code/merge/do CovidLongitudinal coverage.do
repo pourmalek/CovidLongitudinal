@@ -1979,6 +1979,34 @@ save "loc_unique ALL models.dta", replace
 
 
 
+egen loc_unique_DELP_mode = mode(loc_unique_DELP) 
+egen loc_unique_IHME_mode = mode(loc_unique_IHME) 
+egen loc_unique_IMPE_mode = mode(loc_unique_IMPE) 
+egen loc_unique_LANL_mode = mode(loc_unique_LANL) 
+egen loc_unique_UCLA_mode = mode(loc_unique_UCLA) 
+egen loc_unique_YYGU_mode = mode(loc_unique_YYGU) 
+
+tab1 *_mode
+
+
+ssc install hsmode
+
+hsmode loc_unique_DELP 
+hsmode loc_unique_IHME
+hsmode loc_unique_IMPE
+hsmode loc_unique_LANL
+hsmode loc_unique_UCLA
+hsmode loc_unique_YYGU
+
+
+egen loc_unique_LANL_mode_min = mode(loc_unique_LANL), minmode 
+
+tab loc_unique_LANL_mode_min
+
+egen loc_unique_LANL_mode_max = mode(loc_unique_LANL), maxmode 
+
+tab loc_unique_LANL_mode_max
+
 
 
 
