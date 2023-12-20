@@ -7,10 +7,10 @@ cd merge
 
 capture log close 
 
-log using "log CovidLongitudinal merge.smcl", replace
+log using "log CovidLongitudinal coverage.smcl", replace
 
 ***************************************************************************
-* This is "do CovidLongitudinal merge.do"
+* This is "do CovidLongitudinal coverage.do"
 
 * Project: Longitudinal assessment of C 19 models         
 * Objective: Count the number of countries included in each model
@@ -21,27 +21,6 @@ log using "log CovidLongitudinal merge.smcl", replace
 
 
 
-***** get the country merge
-
-* get the number of countries included in C 19 epidemic models' updates 
-
-
-*** for Global level, then for Regional levels ***
-
-
-* find the update date of maximum countries for each model
-
-* gen the maximum countries' list for each model
-
-
-
-
-
-
-
-****************************************************************
-**************************************************************** 
-****************************************************************
 
 * get the number of countries included in C 19 epidemic models' updates
 
@@ -2042,7 +2021,7 @@ graph export "graph 301 Number of countries included in C 19 epidemic models, 20
 
 
 
-view "log CovidLongitudinal merge.smcl"
+view "log CovidLongitudinal coverage.smcl"
 
 log close
 
